@@ -1,27 +1,58 @@
-You are a senior full-stack engineer, DevOps architect, and technical educator.
+# ROLE
 
-I am building a public GitHub repository called "engineering-mastery".
+You are a senior full-stack engineer, DevOps architect, system designer, and technical educator.
 
-Your task is to generate a complete, structured, professional learning repository from beginner to advanced level for:
+You are building a professional, production-grade public GitHub repository called:
 
-"Full-Stack Mastery + DevOps Basics"
+# engineering-mastery
 
-The repository must:
-- Be production-quality documentation
-- Be written clearly and professionally
-- Be structured for step-by-step learning
-- Include deep explanations (not shallow summaries)
-- Include diagrams (ASCII if necessary)
-- Include real-world workflows
+This repository is a complete curriculum for:
+
+> Full-Stack Mastery + DevOps Foundations
+
+The goal is to train someone from beginner level to production-ready engineer.
+
+This must not be shallow.
+This must be deeply structured.
+This must teach systems thinking.
+This must reflect real-world professional practices.
+
+---
+
+# GLOBAL REQUIREMENTS
+
+For every section:
+
+- Use detailed Markdown formatting
+- Use clear hierarchical headings
+- Use diagrams (ASCII if necessary)
 - Include command examples
+- Include architecture diagrams
 - Include best practices
-- Include common mistakes
-- Include interview questions
-- Include practical exercises
+- Include anti-patterns
+- Include debugging strategies
+- Include performance considerations
+- Include security considerations
+- Include scaling considerations
+- Include production mindset explanations
+- Include real-world scenarios
+- Include exercises
 - Include mini project suggestions
-- Be suitable for public GitHub visibility so others can star and learn from it
+- Include interview questions
 
-First, generate the complete folder structure exactly as below:
+Every topic must be explained:
+1. Conceptually
+2. Internally (how it works under the hood)
+3. Practically
+4. In production context
+
+Avoid summaries.
+Avoid surface-level explanations.
+Teach like mentoring a serious engineer.
+
+---
+
+# FOLDER STRUCTURE (STRICT)
 
 engineering-mastery/
 │
@@ -38,211 +69,334 @@ engineering-mastery/
 ├── 10-ci-cd/
 └── 11-deployment-guide/
 
-Then create detailed markdown files inside each folder as described below.
+---
 
----------------------------------------------------------
-README.md
----------------------------------------------------------
-Include:
-- Professional introduction
-- Who this repository is for
-- Learning roadmap
-- Full-stack + DevOps explanation
-- Technology stack overview
-- How to use this repository
-- Recommended learning order
+# README.md (FOUNDATION DOCUMENT)
+
+Must include:
+
+- Professional overview
+- Why full-stack + DevOps matters in modern engineering
+- The evolution from junior to production engineer
+- Systems thinking introduction
+- Learning roadmap (phased progression)
+- Required prerequisites
+- How to use this repository properly
+- Expected outcomes
+- Capstone project overview
 - Contribution guidelines
-- License section
+- License explanation
+- Professional disclaimer
 
----------------------------------------------------------
-01-git-core/
----------------------------------------------------------
-Include:
-- What is Git
-- How Git works internally (working tree, staging area, HEAD)
-- Git object model (blobs, trees, commits)
-- Core commands (init, clone, add, commit, push, pull)
-- Branching strategies
-- Merge vs Rebase
-- Reset vs Revert
-- Stash
-- Cherry-pick
-- Git hooks
-- Troubleshooting common issues
-- Real-world professional workflow example
-- Exercises
-- Interview questions
+---
 
----------------------------------------------------------
-02-github-platform/
----------------------------------------------------------
-Include:
-- Difference between Git and GitHub
-- Repository structure best practices
-- Writing professional README
-- CONTRIBUTING.md guide
-- Licensing overview
-- Issues and project boards
-- Labels and milestones
-- Pull Requests lifecycle
-- Code review best practices
-- Branch protection rules
-- Releases and semantic versioning
-- GitHub security features
-- Dependabot
-- GitHub Actions introduction
-- Exercises and real-world scenarios
+# 01-GIT-CORE (VERSION CONTROL DEEP DIVE)
 
----------------------------------------------------------
-03-collaboration-workflows/
----------------------------------------------------------
-Include:
-- Forking workflow
+Cover:
+
+## Concept Layer
+- What is version control
+- Distributed vs centralized systems
+- Why Git dominates
+
+## Internal Architecture
+- Working directory
+- Staging area (index)
+- Local repository
+- Remote repository
+- HEAD pointer
+- Git object model (blob, tree, commit, tag)
+- SHA-1 hashing
+- DAG (Directed Acyclic Graph)
+
+## Advanced Command Layer
+- init, clone, add, commit
+- branch, checkout, switch
+- merge (fast-forward vs no-ff)
+- rebase (interactive rebase)
+- reset (soft, mixed, hard)
+- revert
+- stash
+- cherry-pick
+- reflog
+- bisect
+- submodules
+- hooks
+
+## Professional Workflow
 - Feature branch workflow
-- GitFlow overview
-- Team collaboration best practices
-- Writing clean commit messages
-- Code review etiquette
-- Handling merge conflicts
-- Professional open-source contribution guide
-- Exercises
+- Release management
+- Hotfix workflow
 
----------------------------------------------------------
-04-backend-core/
----------------------------------------------------------
+## Debugging Git
+- Recovering lost commits
+- Fixing detached HEAD
+- Undoing mistakes safely
+
 Include:
-- What is a backend
-- REST API principles
-- Clean architecture overview
-- MVC structure
-- Controllers, services, repositories
-- Environment variables
-- Error handling strategy
-- Logging
-- Validation
-- Rate limiting basics
-- Production configuration
-- Example backend folder structure
-- Mini backend project guide
+- Diagrams
+- Real conflict resolution scenario
 - Exercises
 - Interview questions
 
----------------------------------------------------------
-05-database-design/
----------------------------------------------------------
+---
+
+# 02-GITHUB-PLATFORM (PROFESSIONAL PLATFORM MASTERY)
+
+Cover:
+
+- Git vs GitHub distinction
+- Repository architecture strategy
+- README standards
+- CONTRIBUTING.md
+- CODE_OF_CONDUCT.md
+- Licensing strategy
+- Issues lifecycle
+- Project boards
+- Milestones
+- Labels strategy
+- Pull request lifecycle
+- Code review standards
+- Branch protection rules
+- Required status checks
+- Semantic versioning
+- Tags and releases
+- GitHub security tab
+- Dependabot
+- Secrets management
+- GitHub Actions foundation
+
 Include:
-- Relational vs NoSQL
-- Database normalization
-- Indexing
+- Real open-source workflow example
+- Security best practices
+- Exercises
+
+---
+
+# 03-COLLABORATION-WORKFLOWS
+
+Cover:
+
+- Forking model
+- Feature branch model
+- GitFlow
+- Trunk-based development
+- Writing meaningful commits (Conventional Commits)
+- Code review etiquette
+- Conflict resolution strategies
+- Professional communication patterns
+- Open-source contribution guide
+
+Include:
+- Real team scenario simulation
+- Exercises
+
+---
+
+# 04-BACKEND-CORE (ENGINEERING ARCHITECTURE)
+
+Cover:
+
+## Backend Fundamentals
+- What is backend engineering
+- Request-response lifecycle
+- REST principles
+- HTTP methods deeply explained
+- Status codes
+- Middleware concept
+
+## Architecture
+- MVC
+- Clean Architecture
+- Layered architecture
+- Dependency injection
+- Separation of concerns
+
+## Production Practices
+- Environment configuration
+- Logging strategies
+- Structured logging
+- Error handling patterns
+- Validation layers
+- Rate limiting
+- Caching basics
+
+Include:
+- Backend folder structure example
+- Mini production backend example
+- Performance considerations
+- Exercises
+- Interview questions
+
+---
+
+# 05-DATABASE-DESIGN (DATA ENGINEERING BASICS)
+
+Cover:
+
+- RDBMS vs NoSQL comparison
+- ACID properties
+- CAP theorem
+- Normalization (1NF, 2NF, 3NF)
+- Indexing strategies
 - Query optimization
 - Transactions
 - Migrations
-- Data modeling
-- ER diagram explanation
-- Real-world schema example
-- Performance considerations
+- Schema evolution
+- ER modeling
+- Data modeling patterns
+- Performance bottlenecks
+
+Include:
+- Real schema example
+- Query performance debugging
 - Exercises
 
----------------------------------------------------------
-06-authentication-security/
----------------------------------------------------------
-Include:
+---
+
+# 06-AUTHENTICATION-SECURITY
+
+Cover:
+
 - Authentication vs Authorization
-- JWT explained deeply
+- JWT internal structure
 - Session-based auth
-- Password hashing
+- OAuth overview
+- Password hashing (bcrypt)
 - Role-based access control
-- Common security vulnerabilities (SQL injection, XSS, CSRF)
-- Secure API best practices
-- Secrets management
-- Environment security
+- Common vulnerabilities:
+  - SQL injection
+  - XSS
+  - CSRF
+  - SSRF
+- Secure headers
+- Environment secrets handling
+- Security auditing mindset
+
+Include:
+- Attack example + mitigation
 - Exercises
 - Interview questions
 
----------------------------------------------------------
-07-frontend-architecture/
----------------------------------------------------------
-Include:
-- Frontend architecture principles
-- Folder structure best practices
-- Component design patterns
-- State management overview
-- API integration strategy
+---
+
+# 07-FRONTEND-ARCHITECTURE
+
+Cover:
+
+- Frontend architecture philosophy
+- Component architecture
+- State management patterns
+- API consumption strategy
 - Error boundaries
 - Performance optimization
-- Build process explained
-- Production build optimization
-- Mini frontend project guide
+- Code splitting
+- Production builds
+- Security considerations (CSP, sanitization)
+- Folder structure design
+- Scalable UI systems
+
+Include:
+- Mini frontend architecture example
 - Exercises
 
----------------------------------------------------------
-08-linux-fundamentals/
----------------------------------------------------------
-Include:
-- What is Linux
-- Linux file system structure
-- Essential commands
+---
+
+# 08-LINUX-FUNDAMENTALS
+
+Cover:
+
+- Linux philosophy
+- File system hierarchy
 - File permissions
 - Process management
+- Signals
 - Environment variables
 - SSH
-- Package managers
 - Logs
-- Real server scenarios
+- Networking basics
+- Package managers
+- System monitoring
+- Real server troubleshooting
+
+Include:
+- Practical server simulation
 - Exercises
 
----------------------------------------------------------
-09-docker-basics/
----------------------------------------------------------
-Include:
-- What is containerization
+---
+
+# 09-DOCKER-BASICS
+
+Cover:
+
+- Containerization concept
 - Docker architecture
-- Image vs container
-- Dockerfile deep explanation
+- Image layering
 - Multi-stage builds
-- Docker Compose
+- Dockerfile deep explanation
 - Networking
 - Volumes
-- Best practices
-- Dockerizing a backend example
+- Docker Compose
+- Container security
+- Production Docker patterns
+
+Include:
+- Dockerizing backend example
+- Debugging container issues
 - Exercises
 
----------------------------------------------------------
-10-ci-cd/
----------------------------------------------------------
-Include:
-- What is CI/CD
+---
+
+# 10-CI-CD
+
+Cover:
+
+- CI vs CD
 - Pipeline stages
-- GitHub Actions workflow syntax
 - Automated testing
-- Build automation
-- Deployment automation
-- Secrets management
-- CI/CD best practices
-- Sample GitHub Actions YAML
+- GitHub Actions workflow syntax
+- Runners
+- Secrets
+- Deployment pipelines
+- Blue-green deployment concept
+- Rollback strategies
+
+Include:
+- Sample workflow YAML
+- Production pipeline simulation
 - Exercises
 
----------------------------------------------------------
-11-deployment-guide/
----------------------------------------------------------
-Include:
-- What is a VPS
+---
+
+# 11-DEPLOYMENT-GUIDE
+
+Cover:
+
+- VPS concept
 - Linux server setup
 - SSH hardening
+- Firewall basics
 - Nginx reverse proxy
-- SSL configuration
+- SSL with Let's Encrypt
 - Domain configuration
-- Deploying Dockerized app
-- Monitoring basics
-- Production debugging
-- Scaling basics
-- Final capstone project integrating all sections
+- Deploying Dockerized application
+- Log monitoring
+- Scaling strategies
+- Load balancing basics
+- Capstone full production deployment
 
-Important:
-Write each section in detailed markdown format.
-Use clear headings.
-Use code blocks for commands.
-Use diagrams if helpful.
-Do not summarize superficially.
-Explain concepts deeply and professionally.
-Teach like training a serious engineer.
+Include:
+- Full end-to-end deployment walkthrough
+- Debugging real production failure
+- Final capstone project integrating all layers
+
+---
+
+# FINAL INSTRUCTION
+
+Generate each section as fully detailed Markdown files.
+
+Do not compress content.
+Do not skip internals.
+Teach with depth.
+Explain like training a serious production engineer.
