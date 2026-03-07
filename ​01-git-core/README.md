@@ -84,6 +84,51 @@ If you checkout a specific commit hash instead of a branch name (e.g., `git chec
 
 ---
 
+## ✍️ Conventional Commits: Writing Professional Git History
+
+A clean Git history is not just aesthetic—it's a debugging tool, a changelog generator, and a communication channel for your team. The [Conventional Commits](https://www.conventionalcommits.org/) specification provides a lightweight set of rules for crafting a consistently structured commit history.
+
+### The Standard Format
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Example:** `feat(auth): implement JWT login for vendors`
+
+### 🔖 Core Commit Types
+
+| Type | Purpose | Example |
+| :--- | :--- | :--- |
+| `feat` | Introduces a brand new feature to the codebase. | `feat(auth): implement JWT login for vendors` |
+| `fix` | Patches a bug or resolves an issue. | `fix(cart): resolve checkout crash on empty cart` |
+| `docs` | Updates or adds documentation (READMEs, inline comments, API docs). No production code is changed. | `docs: add setup instructions for local database` |
+| `style` | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.). **Note:** This is about code formatting, *not* CSS/UI styling. | `style: format C++ files with clang-format` |
+| `refactor` | A code change that neither fixes a bug nor adds a feature, but improves the structure or readability of the code. | `refactor(api): extract database connection logic into separate module` |
+| `perf` | A specific type of refactor that improves performance. | `perf: change O(n²) search algorithm to O(n log n)` |
+| `test` | Adding missing tests or correcting existing ones. | `test(components): add unit tests for reusable Button component` |
+| `build` | Changes that affect the build system or external dependencies (npm packages, CMake, webpack, etc.). | `build: update React version to 18` |
+| `ci` | Changes to Continuous Integration configuration files and scripts (GitHub Actions workflows, etc.). | `ci: add automated testing workflow on pull request` |
+| `chore` | General maintenance tasks, updating tools, or configurations that don't modify source or test files. | `chore: clean up unused image assets` |
+| `revert` | Specifically used to undo a previous commit. | `revert: "feat: add experimental payment gateway"` |
+
+### 🚨 The Breaking Change Indicator (`!`)
+
+If a change breaks backward compatibility (e.g., drastically changing how an API endpoint receives data), add an exclamation mark `!` before the colon:
+
+```
+feat(api)!: drop support for v1 endpoints
+refactor!: rename core database tables
+```
+
+> 💡 **Pro Tip:** If you find yourself struggling to pick just one prefix, it usually means your commit is too large and should be broken down into smaller, separate commits!
+
+---
+
 ## 🎯 Practical Exercises
 1. Initialize a repo, create a file, and use `git cat-file -p HEAD^{tree}` to explore the internal tree structure.
 2. Create a merge conflict on purpose between two branches modifying the same line. Resolve it using a 3-way merge tool.
